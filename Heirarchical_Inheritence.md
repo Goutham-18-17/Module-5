@@ -31,6 +31,61 @@ To write a Python program that uses **Hierarchical Inheritance** to input and di
 5. Display collected information using class methods.
 
 ## Program
-Add code here
+~~~
+class Details:
+    def get_details(self,id1,name,gender):
+        self.id1 = id1
+        self.name = name
+        self.gender = gender
+        
+class Employee(Details):
+    def em_details(self,company,edep):
+        self.company = company
+        self.edep = edep
+    def em_display(self):
+        print("Employee Object")
+        print("Id: ",self.id1)
+        print("Name: ",self.name)
+        print("Gender: ",self.gender)
+        print("Company: ",self.company)
+        print("Department: ",self.edep)
+
+class Patient(Details):
+    def py_details(self,hospital,pdep):
+        self.hospital = hospital
+        self.pdep = pdep
+    def py_display(self):
+        print("\nPatient Object")
+        print("Id: ",self.id1)
+        print("Name: ",self.name)
+        print("Gender: ",self.gender)
+        print("Hospital: ",self.hospital)
+        print("Department: ",self.pdep)
+
+eid1 = int(input())
+ename = input()
+egender = input()
+company = input()
+edep = input()
+
+pid1 = int(input())
+pname = input()
+pgender = input()
+hospital = input()
+pdep = input()
+
+e = Employee()
+e.get_details(eid1,ename,egender)
+e.em_details(company,edep)
+e.em_display()
+
+p = Patient()
+p.get_details(pid1,pname,pgender)
+p.py_details(hospital,pdep)
+p.py_display()
+~~~        
 ## Sample Output
+
+<img width="514" height="458" alt="image" src="https://github.com/user-attachments/assets/6b3086f5-5bac-4c20-89d4-e0691f41b45d" />
+
 
